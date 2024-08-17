@@ -6,6 +6,7 @@ A server-hosted website simulating a modern, real-life animal rescue organizatio
 This website uses:
 * HTML5
 * CSS
+* JavaScript
 * PHP
 
 
