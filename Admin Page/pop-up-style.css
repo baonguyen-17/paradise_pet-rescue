@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+.img-upload-area.highlight {
+    /* Add styles here to highlight the drop area */
+    background-color: #e9e9e9;
+    /* Example: change background color */
+    border: 2px dashed #696969;
+    /* Example: change border */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+    text-decoration: none;
+}
+
+
+.popup {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    overflow: auto;
+}
+
+.popup-container {
+    position: relative;
+    background-color: #fff;
+    padding: 30px 40px;
+    border: 1px solid #888;
+    width: 60vw;
+    border-radius: 14px;
+    color: #555;
+    margin: auto;
+    transform: scale(0);
+}
+
+
+.popup.active {
+    visibility: visible;
+}
+
+.popup.active .popup-container {
+    transform: scale(1);
+    transition: transform 0.7s ease;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+
+
+.popup-container form {
+    padding: 20px;
+    line-height: 1.5;
+    letter-spacing: 1;
+}
+
+
+.form-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.form-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 100%;
+    justify-content: space-between;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.input-field label,
+.img-upload-area label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2e2e2e;
+    padding-top: 15px;
+}
+
+.input-field input,
+.input-field select {
+    outline: none;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px solid #aaa;
+    padding: 10px 10px;
+}
+
+
+.input-field:has(textarea) {
+    flex: 100%;
+}
+
+
+.input-field input::placeholder {
+    color: #aaa;
+}
+
+.input-field input[type="date"]:valid {
+    color: #000;
+}
+
+.input-field input::-webkit-inner-spin-button,
+.input-field input::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+
+.input-field:nth-child(3),
+.input-field:nth-child(7) {
+    flex: 3;
+}
+
+.input-field:last-child {
+    flex: 100%;
+}
+
+
+textarea {
+    padding: 5px 5px;
+}
+
+.input-field:last-child input {
+    margin-top: 10px;
+    transform: scale(1.5);
+    accent-color: rgb(29, 114, 3);
+}
+
+
+.img-upload-area {
+    border: 2px dashed rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    height: 500px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 60%;
+}
+
+.upload-zone {
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.upload-zone i {
+    font-size: 10rem;
+    margin: 20px 0;
+    color: rgba(0, 0, 0, 0.1);
+
+    transition: all 0.3s ease;
+}
+
+.upload-zone:hover i {
+    color: rgba(0, 0, 0, 0.5);
+    transform: scale(1.3);
+}
+
+
+.upload-zone p {
+    font-size: 1rem;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+.upload-zone span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#edit-pet-popup .submit-btn {
+    margin-top: 30px;
+}
+
+.submit-btn button {
+    padding: 20px 40px;
+    background-color: transparent;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 3px solid #2e2d80;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.submit-btn button:hover {
+    background-color: #1ea7dd;
+    border: 3px solid #1ea7dd;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/************************ End Add Pet Pop Up *******************/
+
+.pet-image {
+    width: 400px;
+}
+
+
+.pet-image img {
+    max-width: 400px;
+    object-fit: cover;
+    margin: auto;
+    border: 1px solid #333;
+}
+
+
+.pet-image h3 {
+    background-color: #d3ccae;
+    text-align: center;
+    border: 1px solid #e9e9e9;
+}
+
+.app-id {
+    font-weight: 500;
+    color: #7a7a7a;
+}
+
+section {
+    margin: 20px 0;
+    line-height: 1.5;
+    letter-spacing: 1;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+
+section .section-title {
+    position: relative;
+    text-shadow: none;
+    color: #333;
+}
+
+
+section table {
+    padding-top: 100PX;
+    border-collapse: collapse;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+section th,
+section td {
+    padding: 0.5rem 0.5rem;
+}
+
+section tr:nth-child(2n) {
+    background-color: #e9e9e9;
+}
+
+
+section tr:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+section th {
+    font-weight: 600;
+    width: 60%;
+}
+
+
+
+.accept-deny {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.accept-deny button {
+    padding: 1rem 3rem;
+    font-size: 1.25rem;
+    background-color: transparent;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.accept-deny button:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+#accept {
+    border: 2px solid green;
+}
+
+#accept:hover {
+    background-color: green;
+    color: #fff;
+}
+
+#deny {
+    border: 2px solid red;
+}
+
+#deny:hover {
+    background-color: red;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+
+    .popup-container {
+        width: 100vw;
+    }
+
+    .form-content,
+    .info-section {
+        flex-direction: column;
+    }
+
+    .input-field {
+        width: 100%;
+    }
+
+
+    .submit-btn {
+        margin-top: 30px;
+    }
+}
