@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradise Pet Rescue | Sign Up Form</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <a href="https://paradisepetrescue.in">
+                <img src="images/logo.png">
+            </a>
+            <h4>Paradise Pet <br><span>Rescue</span></h4>
+        </div>
+        <ul class="nav-links">
+            <li class="link"><a href="https://paradisepetrescue.in">Home</a></li>
+            <li class="link"><a href="../Adoption Application Page/application.php">Adopt</a></li>
+            <li class="link"><a href="../Pet Search Page/getpets.php">Pets</a></li>
+            <li class="link"><a href="../About Us Page/AboutUs.php">About Us</a></li>
+            <li class="link"><a href="../Donate Page/donate.php">Donate</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="login-screen">
+            <form action="signup_submit.php" method="post" class="login-form">
+                <h1 class="login-title">Sign Up</h1>
+
+                <div class="input-box">
+                    <i class='bx bxs-rename'></i>
+                    <input type="text" placeholder="First Name" name="firstname" required>
+                </div>
+
+                <div class="input-box">
+                    <i class='bx bxs-rename'></i>
+                    <input type="text" placeholder="Last Name" name="lastname" required>
+                </div>
+
+                <div class="input-box">
+                    <i class='bx bx-envelope'></i>
+                    <input type="email" placeholder="Email Address" name="email" required>
+                </div>
+
+                <div class="input-box">
+                    <i class='bx bxs-phone'></i>
+                    <input type="text" placeholder="Phone number" name="phonenumber" required>
+                </div>
+
+                <div class="input-box">
+                    <i class='bx bxs-user'></i>
+                    <input type="text" placeholder="Username" name="username" required>
+                </div>
+
+                <div class="input-box">
+                    <i class='bx bxs-lock-alt'></i>
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+
+                <div class="remember-forgot-box">
+                    <label for="remember">
+                        <input type="checkbox" id="remember">
+                        Remember me
+                    </label>
+                </div>
+
+                <button type="submit" class="login-btn">Sign Up</button>
+
+                <p class="register">
+                    Already have an account?
+                    <a href="login.html">Log in</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div id="about-us" class="column">
+                <div class="title">
+                    <h5>About Us</h5>
+                </div>
+                <p>Paradise Pet Rescue is a non-profit animal rescue organization that focuses on the welfare of both
+                    citizens and animals. We are dedicated in promoting animal happiness and provide services through
+                    Valencia College</p>
+            </div>
+
+            <div id="webpages" class="column">
+                <div class="title">
+                    <h5>All Pages</h5>
+                </div>
+                <ul class="all-links">
+                    <li class="link">
+                        <i class='bx bx-chevron-right'></i>
+                        <a href="https://paradisepetrescue.in">Home</a>
+                    </li>
+                    <li class="link">
+                        <i class='bx bx-chevron-right'></i>
+                        <a href="../Pet Search Page/getpets.php">Our Pets</a>
+                    </li>
+                    <li class="link">
+                        <i class='bx bx-chevron-right'></i>
+                        <a href="../About Us Page/AboutUs.php">About Us</a>
+                    </li>
+                    <li class="link">
+                        <i class='bx bx-chevron-right'></i>
+                        <a href="../Donate Page/donate.php">Donate</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="contacts" class="column">
+                <div class="title">
+                    <h5>Contact Us</h5>
+                </div>
+
+                <ul class="contact-infos">
+                    <li class="org-title">
+                        <p>Paradise Pet Rescue Center</p>
+                    </li>
+                    <li>701 N Econlockhatchee Trail, Orlando, FL 32825</li>
+                    <li>(407) 123-4567</li>
+                    <li>https://paradisepetrescue.in</li>
+                    <li class="social-medias">
+                          <a href="https://facebook.com/people/Paradise-Pet-Rescue/61558739576412/" target="_blank" style="color: #E0E0E0;"><i class='bx bxl-facebook-square'></i></a>
+                          <a href="https://www.instagram.com/paradisepetrescue01/" target="_blank" style="color: #E0E0E0;"><i class='bx bxl-instagram'></i></a>
+                          <a href="http://twitter.com/Paradisepet01" target="_blank" style="color: #E0E0E0;"><i class='bx bxl-twitter'></i></a>
+                      </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2024 Paradise Pet Rescue</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
